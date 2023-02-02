@@ -42,5 +42,16 @@ public class ExecuteQuery01 {
             System.out.println("--------");
         }
 
+
+        //3. orn: "number_of_employees" degeri en dusuk olan satirin tum degerlerini yazdirin.
+
+        String sql3a ="select min(number_of_employees) from companies";
+      ResultSet ra3 =  st.executeQuery(sql3a);
+
+      while (ra3.next()){
+          System.out.println(ra3.getString(1));
+      }
+      con.close();
+      st.close();
     }
 }
