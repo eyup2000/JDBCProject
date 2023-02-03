@@ -5,49 +5,116 @@ import java.sql.Statement;
 
 
 public class JDBCUtils {
-    public static void main(String[] args) {
-        connectionDataBase();
-    }
+
 
     private static Connection connection;
-    private  static Statement statement;
-    //1.adım : Driver'a kaydol
-    //2.adım: Database bağlan
+    private static Statement statement;
+    //1. Adim: Driver'a kaydol
+    //2.Adim: Database'e baglan
+    public static Connection connectToDataBase(String hostName, String dbName, String userName, String password){
 
-    public static Connection connectionDataBase(){
         try {
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
 
-
         try {
-            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/Arcane","postgres","5784");
+            connection = DriverManager.getConnection("jdbc:postgresql://"+hostName+":5432/"+dbName, userName,password);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
-
         if (connection!=null){
-            System.out.println("connection Başarili");
-        }else {
-            System.out.println("connection Başarisiz");
+            System.out.println("Connection Basarili");
+        }else{
+            System.out.println("Connection Basarisiz");
         }
 
         return connection;
     }
-
+    //3.Adim: Statement olustur
     public static Statement createStatement(){
+
         try {
-            Statement st = connection.createStatement();
+            statement = connection.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return statement;
+    }
+
+    //4. Adim: Query (sorgu) olustur/calistir
+    public static boolean execute(String sql){
+        boolean isExecute;
+        try {
+            isExecute = statement.execute(sql);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
-        return statement;
+        return isExecute;
     }
 
+    //5. Adim: Baglanti ve Statement'i kapat
+    public static void closeConnectionVeStatement(){
+        try {
+            connection.close();
+            statement.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        try {
+            if (connection.isClosed() && statement.isClosed()){
+                System.out.println("Connection ve Statement kapatildi");
+            }else {
+                System.out.println("Connection veya Statement hala acik");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+    //Table olusturan bir method olust
+    // "Create Table tableName(sutunAdi datatipi, .........)"
+
+    public static void createTable(String tableName, String ... sutun_sayisi){
+        StringBuilder sutunIsmi_stb = new StringBuilder("");
+
+        for (String herBirSutun : sutun_sayisi ){
+            sutunIsmi_stb.append(herBirSutun).append(",");
+        }
+        sutunIsmi_stb.deleteCharAt(sutunIsmi_stb.length()-1);
+        System.out.println(sutunIsmi_stb);
+
+
+        try {
+            statement.execute("Create Table "+tableName+"("+sutunIsmi_stb+")");
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
+
+   /* public static void createTable(String tableName, String ... sutun_sayisi){
+        StringBuilder sutunIsmi_stb = new StringBuilder("");
+
+        for (String herBirSutun : sutun_sayisi){
+            sutunIsmi_stb.append(herBirSutun).append(",");
+        }
+        sutunIsmi_stb.deleteCharAt(sutunIsmi_stb.length()-1);
+        System.out.println(sutunIsmi_stb);
+
+        try {
+            statement.execute("Create Table"+tableName+"("+sutunIsmi_stb+")");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }*/
 
 
 }

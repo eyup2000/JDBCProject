@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="010c0c56-4710-4d9c-9b46-b6eb890c6e9d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CallableStatement01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ExecuteQuery02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ExecuteUpdate01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/JDBCUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PreparedStatement01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Runner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/CountriesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MedunaTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ExecuteQuery01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExecuteQuery01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JDBCUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JDBCUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,49 +47,59 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.JDBCUtils">
-    <configuration name="CallableStatement01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="CallableStatement01" />
+  <component name="RunManager" selected="JUnit.MedunaTest">
+    <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Runner" />
       <module name="JDBCProject" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExecuteQuery02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ExecuteQuery02" />
+    <configuration name="CountriesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JDBCProject" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CountriesTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExecuteUpdate01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ExecuteUpdate01" />
+    <configuration name="CountriesTest.countryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JDBCProject" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CountriesTest" />
+      <option name="METHOD_NAME" value="countryTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JDBCUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JDBCUtils" />
+    <configuration name="MedunaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JDBCProject" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MedunaTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PreparedStatement01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PreparedStatement01" />
+    <configuration name="MedunaTest.countryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JDBCProject" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MedunaTest" />
+      <option name="METHOD_NAME" value="countryTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.JDBCUtils" />
-        <item itemvalue="Application.CallableStatement01" />
-        <item itemvalue="Application.PreparedStatement01" />
-        <item itemvalue="Application.ExecuteUpdate01" />
-        <item itemvalue="Application.ExecuteQuery02" />
+        <item itemvalue="JUnit.MedunaTest" />
+        <item itemvalue="JUnit.MedunaTest.countryTest" />
+        <item itemvalue="JUnit.CountriesTest.countryTest" />
+        <item itemvalue="Application.Runner" />
+        <item itemvalue="JUnit.CountriesTest" />
       </list>
     </recent_temporary>
   </component>
